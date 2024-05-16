@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-crud-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springboot-k8s-mysql
+  template:
+    metadata:
+      labels:
+        app: springboot-k8s-mysql
+    spec:
+      containers:
+      - name: springboot-k8s-mysql
+        image: tahermzid/backend_devops:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+          - name: DB_HOST
+            value: mysql
+          - name: DB_NAME
+            value: achat
+          - name: DB_USERNAME
+            value: root
+          - name: DB_PASSWORD
+            value: db
+
