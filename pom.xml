@@ -11,7 +11,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.achat.rh</groupId>
-	<artifactId>achat</artifactId>
+	<artifactId>esprit</artifactId>
 	<version>1.0</version>
 	<name>achat</name>
 	<description>Projet pour le module DevOps</description>
